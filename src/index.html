@@ -13,78 +13,80 @@
 <div class="flex flex-col  flex-grow  bg-[#e2f2fc] ">
      
     <h1 class="text-center ml-40 max-w-3xs  ">Enter a city Name</h1>
-    <input type="text" id="user-location" class=" border ml-40 mt-5   border-gray-800 max-w-3xs h-6 ">
-    <button class="max-w-3xs mt-8 justify-between ml-40  bg-blue-600  text-white">Search</button>
+    <input type="text" id="user-location" class=" border ml-40 mt-5 text-center   border-gray-800 max-w-3xs h-6 ">
+    <button id="search" class="max-w-3xs mt-8 justify-between ml-40  bg-blue-600  text-white">Search</button>
      
     <!--  -->
-    <div class="flex flex-row  mt-6 mr-28 items-center"> 
+    <div class="flex flex-row  mt-6  ml-26 mr-28 items-center"> 
         <hr class="flex flex-grow ">
         <span class="mx-4 ">or</span>
         <hr class="flex flex-grow">
     </div>
     <!-- -->
-    <button class="bg-gray-600 max-w-xl text-white ">Use Current Location</button>
+    <button id="Currentlocation" class="bg-gray-600 max-w-l mr-28 ml-26 text-white ">Use Current Location</button>
+    <div id="dispaly-image"></div>
     </div>
     <!--  -->
     
     
     <div class="max-w-5xl min-h-5 flex-grow p-2  ">
     <div class="flex  flex-grow bg-[#FFB6A1] h-48 justify-between">
-    <div class="text-white">
-    <h2>Place <span>date</span></h2>
-    <h2>temperature</h2>
-    <h2>wind</h2>
-    <h2>humidity</h2>
+    <div class="text-gray-700 flex flex-col gap-4 ml-6 mt-6  ">
+    <h2 id="place">Place <span>date</span></h2>
+    <h2 id="temprature">temprature</h2>
+    <h2 id="wind">wind</h2>
+    <h2 id="humidity">humidity</h2>
     </div>
-    <div class="bg-amber-500 min-w-xs">
-     <h2>hello</h2>
+    <div class="bg-amber-500 min-w-xs  flex items-center justify-center">
+    <img class="h-64 w-64 justify-center hidden" id="weather-image" alt="weather-icon">
     </div>
     </div>
-    <div class="mt-36 flex  text-5xl justify-center ">5-Day Forecast</div>
-    <div class="flex justify-around space-x-4 max-h-l mt-20 w-full max-w-5xl p-2 ">
-    <div class="max-w-[250px] flex-grow h-45 mt-7 text-white bg-[#6b747c] p-2">
-    <h2>date</h2>
-    <i></i>
-    <h2>temp: </h2>
-    <h2>wind: </h2>
-    <h2>humidity: </h2>
+    <div class="mt-32 flex text-5xl justify-center">5-Day Forecast</div>
+<div class="flex    justify-around space-x-4 max-h-l mt-20 w-full max-w-5xl p-2  ">
+    <!-- Day 1 -->
+    <div class="forecast-day max-w-[250px] flex-grow   mt-7 text-white bg-[#6b747c] p-2">
+        <h2 class="date">Date</h2>
+        <img class="weather-icon hidden"   alt="weather-icon">
+        <h2 class="temp">Temp: </h2>
+        <h2 class="wind">Wind: </h2>
+        <h2 class="humidity">Humidity: </h2>
     </div>
-    <div class="max-w-[250px] flex-grow mt-7 text-white bg-[#6b747c] p-2">
-        <h2>date</h2>
-        <i></i>
-        <h2>temp: </h2>
-        <h2>wind: </h2>
-        <h2>humidity: </h2>
-        </div>
-        <div class="max-w-[250px] flex-grow text-white max-h-2xl mt-7 bg-[#6b747c] p-2">
-            <h2>date</h2>
-            <i></i>
-            <h2>temp: </h2>
-            <h2>wind: </h2>
-            <h2>humidity: </h2>
-        </div>
-        <div class="max-w-[250px] flex-grow text-white max-h-2xl mt-7 bg-[#6b747c] p-2">
-            <h2>date</h2>
-            <i></i>
-            <h2>temp: </h2>
-            <h2>wind: </h2>
-            <h2>humidity: </h2>
-        </div>
-        <div class="max-w-[250px] flex-grow max-h-2xl mt-7 text-white bg-[#6b747c] p-2">
-            <h2>date</h2>
-            <i></i>
-            <h2>temp: </h2>
-            <h2>wind: </h2>
-            <h2>humidity: </h2>
-        </div>
+    <!-- Day 2 -->
+    <div class="forecast-day max-w-[250px] flex-grow mt-7   text-white bg-[#6b747c] p-2">
+        <h2 class="date">Date</h2>
+        <img class="weather-icon hidden"   alt="weather-icon">
+        <h2 class="temp">Temp: </h2>
+        <h2 class="wind">Wind: </h2>
+        <h2 class="humidity">Humidity: </h2>
     </div>
-    
+    <!-- Day 3 -->
+    <div class="forecast-day max-w-[250px] flex-grow text-white   mt-7 bg-[#6b747c] p-2">
+        <h2 class="date">Date</h2>
+        <img class="weather-icon hidden "   alt="weather-icon">
+        <h2 class="temp">Temp: </h2>
+        <h2 class="wind">Wind: </h2>
+        <h2 class="humidity">Humidity: </h2>
+    </div>
+    <!-- Day 4 -->
+    <div class="forecast-day max-w-[250px] flex-grow text-white   mt-7 bg-[#6b747c] p-2">
+        <h2 class="date">Date</h2>
+        <img class="weather-icon hidden"   alt="weather-icon">
+        <h2 class="temp">Temp: </h2>
+        <h2 class="wind">Wind: </h2>
+        <h2 class="humidity">Humidity: </h2>
+    </div>
+    <!-- Day 5 -->
+    <div class="forecast-day max-w-[250px] flex-grow   mt-7 text-white bg-[#6b747c] p-2">
+        <h2 class="date">Date</h2>
+        <img class="weather-icon hidden"   alt="weather-icon">
+        <h2 class="temp">Temp: </h2>
+        <h2 class="wind">Wind: </h2>
+        <h2 class="humidity">Humidity: </h2>
     </div>
 </div>
+</div>
+</div>
 
- 
- 
- 
- 
 </body>
 </html>
+

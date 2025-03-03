@@ -1,3 +1,18 @@
- 
-
 @import "tailwindcss";
+/* @theme {
+    --breakpoint-xs: 24rem;
+    --breakpoint-2xl: 100rem;
+    --breakpoint-3xl: 120rem;
+  } */
+
+
+#weather-image[src] {
+    display: block; /* When an image src is set, show the image */
+}
+.weather-icon[src] 
+{
+    display: block; /* When an image src is set, show the image */
+}
+
+
+

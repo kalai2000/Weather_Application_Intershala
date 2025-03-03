@@ -710,11 +710,17 @@
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
-  .mt-36 {
-    margin-top: calc(var(--spacing) * 36);
+  .mt-32 {
+    margin-top: calc(var(--spacing) * 32);
   }
   .mr-28 {
     margin-right: calc(var(--spacing) * 28);
+  }
+  .ml-6 {
+    margin-left: calc(var(--spacing) * 6);
+  }
+  .ml-26 {
+    margin-left: calc(var(--spacing) * 26);
   }
   .ml-40 {
     margin-left: calc(var(--spacing) * 40);
@@ -809,11 +815,11 @@
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
-  .h-45 {
-    height: calc(var(--spacing) * 45);
-  }
   .h-48 {
     height: calc(var(--spacing) * 48);
+  }
+  .h-64 {
+    height: calc(var(--spacing) * 64);
   }
   .h-screen {
     height: 100vh;
@@ -830,8 +836,14 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-64 {
+    width: calc(var(--spacing) * 64);
   }
   .w-full {
     width: 100%;
@@ -853,9 +865,6 @@
   }
   .max-w-screen {
     max-width: 100vw;
-  }
-  .max-w-xl {
-    max-width: var(--container-xl);
   }
   .min-w-screen {
     min-width: 100vw;
@@ -1256,6 +1265,9 @@
   .justify-items-stretch {
     justify-items: stretch;
   }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 1;
@@ -1498,8 +1510,11 @@
   .bg-amber-500 {
     background-color: var(--color-amber-500);
   }
-  .bg-blue-500 {
-    background-color: var(--color-blue-500);
+  .bg-amber-700 {
+    background-color: var(--color-amber-700);
+  }
+  .bg-amber-800 {
+    background-color: var(--color-amber-800);
   }
   .bg-blue-600 {
     background-color: var(--color-blue-600);
@@ -1814,6 +1829,9 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-gray-700 {
+    color: var(--color-gray-700);
   }
   .text-white {
     color: var(--color-white);
@@ -2266,6 +2284,16 @@
       flex-direction: column;
     }
   }
+  .sm\:flex-col {
+    @media (width >= 40rem) {
+      flex-direction: column;
+    }
+  }
+  .md\:flex-nowrap {
+    @media (width >= 48rem) {
+      flex-wrap: nowrap;
+    }
+  }
   .md\:max-lg\:flex-col {
     @media (width >= 48rem) {
       @media (width < 64rem) {
@@ -2280,6 +2308,17 @@
       }
     }
   }
+  .lg\:justify-between {
+    @media (width >= 64rem) {
+      justify-content: space-between;
+    }
+  }
+}
+#weather-image[src] {
+  display: block;
+}
+.weather-icon[src] {
+  display: block;
 }
 @keyframes spin {
   to {
